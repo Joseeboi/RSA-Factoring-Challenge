@@ -1,0 +1,15 @@
+#!/bin/usr/python3
+
+import sympy
+import random
+import time
+
+def factorize_large_number(n):
+    start_time = time.time()
+    factors = sympy.factorint(n)
+    end_time = time.time()
+    return factors, end_time - start_time
+
+factors, execution_time = factorize_large_number(n)
+print(f"Factors of {n} are: {factors}")
+print(f"Execution time: {execution_time} seconds")
